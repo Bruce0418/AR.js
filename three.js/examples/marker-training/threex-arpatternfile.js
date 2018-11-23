@@ -82,7 +82,8 @@ THREEx.ArPatternFile.triggerDownload =  function(patternFileString){
 
 THREEx.ArPatternFile.buildFullMarker =  function(innerImageURL, onComplete){
 	var whiteMargin = 0.1
-	var blackMargin = 0.12
+	//var blackMargin = 0.12
+	var blackMargin = (1 - 2 * whiteMargin) * ((1-pattRatio)/2)
 	var innerMargin = whiteMargin + blackMargin
 
 	var canvas = document.createElement('canvas');
